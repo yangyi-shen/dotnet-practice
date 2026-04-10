@@ -1,0 +1,19 @@
+# Build
+DotnetPractice/bin/
+DotnetPractice/obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+
+# VS Code local settings
+.vscode/
+
+# Local development settings
+DotnetPractice/Properties/launchSettings.json
+DotnetPractice/appsettings.Development.json
