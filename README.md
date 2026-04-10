@@ -5,8 +5,8 @@
 # todo-list
 
 - [ ] Lớp Repository
-  - [ ] Tạo cơ sở dữ liệu T-SQL trên máy tính bản
-  - [ ] Chuẩn bị liên kết với cơ sở dữ liệu
+  - [x] Tạo cơ sở dữ liệu T-SQL trên máy tính bản
+  - [x] Chuẩn bị liên kết với cơ sở dữ liệu
   - [ ] Tạo chức năng thao tác dử liệu CRUD
 - [ ] Lớp Models
   - [ ] Tạo model cho tài liệu được lưu trử trong cơ sở dữ liệu
