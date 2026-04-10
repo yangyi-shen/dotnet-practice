@@ -27,9 +27,14 @@ namespace DotnetPractice.Repository
             return await _dbo.Users.ToListAsync();
         }
 
-        public async Task<User> GetUserByGUID(string guid)
+        public async Task<User?> GetUserByGUID(string GUID)
         {
-            return await _dbo.Users.Where(u => u.GUID == guid).FirstAsync();
+            return await _dbo.Users.Where(u => u.GUID == GUID).FirstOrDefaultAsync();
+        }
+
+        public async Task<User?> GetUserByPassword(string password)
+        {
+            return await _dbo.Users.Where(u => u.Password == password).FirstOrDefaultAsync();
         }
 
         public async Task EditUser(User data)
