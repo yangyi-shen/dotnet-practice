@@ -8,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<UserDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("UserDB"))
 );
+builder.Services.AddDbContext<ContentDBContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ContentDB"))
+);
 
 builder.Services.AddScoped<UserRepository>();
 builder.Services.AddScoped<UserService>();
