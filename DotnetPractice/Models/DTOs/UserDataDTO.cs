@@ -10,11 +10,6 @@ namespace DotnetPractice.Models.Responses
     {
         [SetsRequiredMembers]
         public UserDataDTO(User user)
-        {
-            GUID = user.GUID;
-            UserName = user.UserName;
-            CreatedAt = user.CreatedAt;
-            UpdatedAt = user.UpdatedAt;
-        }
+            : base(user.UserName) { }
     }
 }
