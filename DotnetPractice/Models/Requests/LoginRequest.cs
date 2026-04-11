@@ -7,6 +7,6 @@ namespace DotnetPractice.Models.Requests
 {
     public class LoginRequest
     {
-        public required string Password { get; set; }
+        public required string UserName { get; set; }
     }
 }

@@ -22,9 +22,9 @@ namespace DotnetPractice.Services
 
         public async Task<ApiResponse<LoginResponseDTO>> LoginUser(LoginRequest request)
         {
-            string password = request.Password;
+            string userName = request.UserName;
 
-            User? user = await _repository.GetUserByPassword(password);
+            User? user = await _repository.GetUserByUserName(userName);
             if (user == null)
             {
                 throw new ApiException(ApiExceptions.USER_NOT_FOUND);
