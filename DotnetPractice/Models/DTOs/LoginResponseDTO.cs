@@ -12,7 +12,7 @@ namespace DotnetPractice.Models.Responses
         public LoginResponseDTO(User user)
         {
             GUID = user.GUID;
-            Password = user.Password;
+            UserName = user.UserName;
             CreatedAt = user.CreatedAt;
             UpdatedAt = user.UpdatedAt;
         }
