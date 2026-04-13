@@ -1,6 +1,6 @@
 # dotnet-practice
 
-Đây là ứng dụng API cơ bản sữ dụng dụng cụ C# .NET mà mình đã tạo để học tập cho việc làm, với tập luyện khả năng kai phát cá nhân trong lĩnh vực này!
+Đây là ứng dụng API cơ bản sữ dụng dụng cụ C# .NET + cơ sở dữ liệu bản địa T-SQL mà mình đã tạo để học tập cho việc làm, với tập luyện khả năng kai phát cá nhân trong lĩnh vực này!
 
 # todo-list
 
