@@ -21,6 +21,15 @@ namespace DotnetPractice.Controllers
             _service = service;
         }
 
+        [HttpGet("filtered")]
+        public async Task<ActionResult<ApiResponse<List<Post>>>> GetFilteredPosts(
+            [FromQuery] GetFilteredPostsRequest request
+        )
+        {
+            ApiResponse<List<Post>> response = await _service.GetFilteredPosts(request);
+            return Ok(response);
+        }
+
         [HttpPost("add")]
         public async Task<ActionResult<ApiResponse<Post>>> AddPost(AddPostRequest request)
         {
