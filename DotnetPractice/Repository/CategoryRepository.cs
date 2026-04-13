@@ -22,6 +22,11 @@ namespace DotnetPractice.Repository
             await _dbo.SaveChangesAsync();
         }
 
+        public async Task<bool> CategoryExistsByGUID(Guid GUID)
+        {
+            return await _dbo.Categories.Where(c => c.GUID == GUID).AnyAsync();
+        }
+
         public async Task<List<Category>> GetAllCategories()
         {
             return await _dbo.Categories.ToListAsync();
