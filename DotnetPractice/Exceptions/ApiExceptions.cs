@@ -15,10 +15,15 @@ namespace DotnetPractice.Exceptions
             "Category already exists"
         );
         public static readonly ApiExceptionDetails USER_NOT_FOUND = new(2001, "User not found");
+        public static readonly ApiExceptionDetails CATEGORY_NOT_FOUND = new(
+            2002,
+            "Category not found"
+        );
         public static readonly ApiExceptionDetails USER_INVALID = new(3001, "User data is invalid");
         public static readonly ApiExceptionDetails CATEGORY_INVALID = new(
             3002,
             "Category data is invalid"
         );
+        public static readonly ApiExceptionDetails POST_INVALID = new(3003, "Post data is invalid");
     }
 }
