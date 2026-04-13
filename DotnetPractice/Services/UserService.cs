@@ -6,7 +6,6 @@ using DotnetPractice.Exceptions;
 using DotnetPractice.Models;
 using DotnetPractice.Models.DTOs;
 using DotnetPractice.Models.Requests;
-using DotnetPractice.Models.Responses;
 using DotnetPractice.Repository;
 using DotnetPractice.Utils;
 
@@ -22,7 +21,7 @@ namespace DotnetPractice.Services
             _repository = repository;
         }
 
-        public async Task<ApiResponse<UserDataDTO>> RegisterUser(RegisterRequest request)
+        public async Task<ApiResponse<User>> RegisterUser(RegisterRequest request)
         {
             string userName = request.UserName;
 
@@ -40,13 +39,12 @@ namespace DotnetPractice.Services
             User newUser = new(userName);
             await _repository.AddUser(newUser);
 
-            UserDataDTO responseContent = new(newUser);
-            ApiResponse<UserDataDTO> response = new(true, responseContent);
+            ApiResponse<User> response = new(true, newUser);
 
             return response;
         }
 
-        public async Task<ApiResponse<UserDataDTO>> LoginUser(LoginRequest request)
+        public async Task<ApiResponse<User>> LoginUser(LoginRequest request)
         {
             string userName = request.UserName;
 
@@ -61,8 +59,7 @@ namespace DotnetPractice.Services
                 throw new ApiException(ApiExceptions.USER_NOT_FOUND);
             }
 
-            UserDataDTO responseContent = new(user);
-            ApiResponse<UserDataDTO> response = new(true, responseContent);
+            ApiResponse<User> response = new(true, user);
 
             return response;
         }
